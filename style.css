@@ -46,14 +46,14 @@ canvas {
 
   header {
     background: var(--dark-bg);
-    grid-column: 4 / span 5;
+    grid-column: 2 / span 9;
     font-size: 2.5rem;
     padding: 2rem;
     margin-bottom: var(--spacing);
   }
 
   section {
-    grid-column: 4 / 8;
+    grid-column: 2 / span 9;
     padding: 1rem;
     background: var(--dark-bg);
     font-size: 1.25rem;
@@ -77,5 +77,5 @@ canvas {
   }
 
   .left {
-    grid-column: 6 / 12;
+    grid-column: 2 / span 9;
   }
