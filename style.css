@@ -1,76 +1,105 @@
-@import url("https://use.typekit.net/jmk3xov.css");
-
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #333;
+  color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
-
-:root {
-  --dark-bg: rgba(15, 15, 15, 0.95);
-  --spacing: 350px;
-
-  font-family: brandon-grotesque, sans-serif;
-  font-weight: 400;
-  font-style: normal;
+/* Header Styles */
+header {
+  background: var(--dark-bg);
+  grid-column: 1 / span 12; /* Take full width on mobile */
+  font-size: 2rem;
+  padding: 1rem;
+  margin-bottom: var(--spacing);
 }
 
-
+/* Main Section Styles */
 main {
-  width: 100vw;
+  width: 100%;
   color: white;
   z-index: 99;
   position: absolute;
-  width: 100%;
   margin: 0px auto;
-  padding: 120px 0px;
-  
+  padding: 20px 0px; /* Adjusted padding for mobile */
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: 1fr;
 }
 
-h1, h2, h3, blockquote {
-  font-family: elevon, sans-serif;
-  font-weight: 700;
-  font-style: normal;
+/* Quote Styles */
+blockquote {
+  margin: 0;
+  padding: 0;
+  grid-column: 1 / span 12; /* Take full width on mobile */
+  margin-bottom: var(--spacing);
 }
 
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
+/* Section Styles */
+section {
+  grid-column: 1 / span 12; /* Take full width on mobile */
+  padding: 1rem;
+  background: var(--dark-bg);
+  font-size: 1rem; /* Adjusted font size for mobile */
+  line-height: 1.5;
+  margin-bottom: var(--spacing);
 }
 
+/* Left Section Styles */
+.left {
+  grid-column: 1 / span 12; /* Take full width on mobile */
+}
 
+/* Contact Container Styles */
+.contact-container {
+  max-width: 100%; /* Take full width on mobile */
+  margin: 0;
+  padding: 20px;
+}
 
+/* Form Styles */
+form {
+  margin-top: 20px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Button Styles */
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive Media Query for Mobile */
+@media screen and (max-width: 600px) {
   header {
-    background: var(--dark-bg);
-    font-size: 2.5rem;
-    padding: 2rem;
-    margin-bottom: var(--spacing);
-  }
-
-  section {
-    padding: 1rem;
-    background: var(--dark-bg);
-    font-size: 1.25rem;
-    line-height: 1.5;
-    margin-bottom: var(--spacing);
-  }
-
-  blockquote {
-    margin: 0;
-    padding: 0;
-    grid-column: 2 / span 9;
-    margin-bottom: var(--spacing);
+    font-size: 1.5rem;
   }
 
   blockquote p {
-    color: black;
-    background-color: white;
-    font-size: 4rem;
-    display: inline;
-    line-height: 1;
+    font-size: 2rem;
   }
 
+  section {
+    font-size: 0.875rem;
+  }
+}
